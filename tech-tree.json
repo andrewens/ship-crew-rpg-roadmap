@@ -3,7 +3,36 @@
     "begin": {
       "dependencies": [],
       "display-name": "Begin",
-      "completed": "4-11-24"
+      "completed": "4-11-24",
+      "icon": "assets/beaker.png"
+    },
+    "agents": {
+      "dependencies": ["begin"],
+      "display-name": "Basic Agents",
+      "blurb": "Agents can walk to points or specific blocks using pathfinding",
+      "completed": "4-11-24",
+      "icon": "assets/character.png"
+    },
+    "camera-controls": {
+      "dependencies": ["begin"],
+      "display-name": "Camera Controls",
+      "blurb": "Move camera with WASD",
+      "completed": "4-11-24",
+      "icon": "assets/camera.png"
+    },
+    "ai-prompt-actions": {
+      "dependencies": ["agents"],
+      "display-name": "Prompt Agents to do Single Tasks",
+      "blurb": "Prompt agents to do a task using natural language (move to a block & change state)",
+      "completed": "4-11-24",
+      "icon": "assets/computer-chip.png"
+    },
+    "basic-2d-render": {
+      "dependencies": ["camera-controls", "agents"],
+      "display-name": "Basic pixel art render",
+      "blurb": "Render images over tiles + character sprites with walking animations + agent status emojis",
+      "completed": "4-11-24",
+      "icon": "assets/grass-block.webp"
     }
   }
 }
