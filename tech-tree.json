@@ -33,6 +33,74 @@
       "blurb": "Render images over tiles + character sprites with walking animations + agent status emojis",
       "completed": "4-11-24",
       "icon": "assets/grass-block.webp"
+    },
+    "hello-world-milestone": {
+      "dependencies": ["basic-2d-render"],
+      "display-name": "Milestone #0 - Hello World",
+      "blurb": "Combine generative AI agents with a 2d game environment",
+      "completed": "4-11-24"
+    },
+
+    "map-editor": {
+      "dependencies": ["hello-world-milestone"],
+      "display-name": "Map editing at Runtime",
+      "blurb": "Admins can edit the map at runtime: 1) Paint blocks on a plane a different enum (even if they're air); 2) Place, move, delete, anchor/unanchor props; 3) dump map json to a textbox, copy paste it, and save it in the game files"
+    },
+    "regions-editor": {
+      "dependencies": ["map-editor"],
+      "display-name": "Configure map regions at Runtime",
+      "blurb": "Admins can view map spatial partitioning tree regions, which are rectangles snapped to the tilemap grid; admins can drag the corners of regions, create new regions, and delete regions."
+    },
+    "character-controls": {
+      "dependencies": ["hello-world-milestone"],
+      "display-name": "Players can control agents",
+      "blurb": "Players can control an agent using WASD. Their camera tracks the agent they're controlling automatically. Players can only control one agent at a time. Controlled agents can't be prompted via LLM in any capacity."
+    },
+    "basic-inventory": {
+      "dependencies": ["character-controls"],
+      "display-name": "Agents can pick up and drop items",
+      "blurb": "Agents can pick up items by walking over dropped items, unless all ten item slots in their hotbar are full. All items stack infinitely. Agents can equip one item at a time (or unequip items), which they can then drop. Players controlling an agent see its inventory and can drop and unequip/equip items."
+    },
+    "guns": {
+      "dependencies": ["basic-inventory"],
+      "display-name": "Agents can shoot weapons",
+      "blurb": "Agents can pick up gun items, which they can shoot. If an agent is shot, they take damage and eventually die, and are removed. Agents flash red when they take damage."
+    },
+    "shooting-level": {
+      "dependencies": ["guns"],
+      "display-name": "Configuration & Level Design",
+      "blurb": "Throw together a simple map & configure the game so evil agents & players respawn. Maybe evil agents attack in waves, and players have to forage dangerous areas for ammo or even better weapons"
+    },
+
+    "shooting-milestone": {
+      "dependencies": ["shooting-level"],
+      "display-name": "Milestone #1 - Shoot Bad Guys",
+      "blurb": "Players can play a game where they shoot each other and evil agents"
+    },
+    "ship-milestone": {
+      "dependencies": ["shooting-milestone"],
+      "display-name": "Milestone #2 - Protect and Repair Your Ship",
+      "blurb": "Players can board ships which automatically travel the solar system, and are in need of constant repair and defense."
+    },
+    "mining-milestone": {
+      "dependencies": ["ship-milestone"],
+      "display-name": "Milestone #3 - Collect Resources for your Ship & Missions",
+      "blurb": "Players can explore many different planets to forage and mine for items needed for quests and repairing/upgrading their ship."
+    },
+    "fun-landmark": {
+      "dependencies": ["mining-milestone"],
+      "display-name": "Landmark #1 - Game is fun",
+      "blurb": "Playtesters naturally keep playing the game because it is fun"
+    },
+    "aesthetic-landmark": {
+      "dependencies": ["fun-landmark"],
+      "display-name": "Landmark #2 - Game world is pretty",
+      "blurb": "Develop art pipeline for characters and animations and map textures and sounds"
+    },
+    "monetized-landmark": {
+      "dependencies": ["aesthetic-landmark"],
+      "display-name": "Landmark #3 - Game is monetized & progresses the player",
+      "blurb": "Build out the player's progression and add a shop for monetization"
     }
   }
 }
