@@ -69,6 +69,11 @@
       "display-name": "Players can control agents",
       "blurb": "Players can control an agent using WASD. Their camera tracks the agent they're controlling automatically. Players can only control one agent at a time. Controlled agents can't be prompted via LLM in any capacity."
     },
+    "alien-swarm": {
+      "dependencies": ["character-controls"],
+      "display-name": "Alien Swarm",
+      "blurb": "Hostile NPC, kind of like zombies. Follow nearby agents, deal damage on touch"
+    },
     "basic-inventory": {
       "dependencies": ["character-controls"],
       "display-name": "Agents can pick up and drop items",
@@ -102,7 +107,7 @@
     "character-textures": {
       "dependencies": ["basic-inventory"],
       "display-name": "Character sprites",
-      "blurb": "Two character spritesheets (one per team). Includes walk cycles for character while they're holding an item, and while they're empty handed. Characters look sci fi."
+      "blurb": "Two character spritesheets -- alien swarm and human. Includes walk cycles for character while they're holding an item, and while they're empty handed. Characters look sci fi."
     },
     "respawn": {
       "dependencies": ["character-controls"],
@@ -113,6 +118,11 @@
       "dependencies": ["guns", "grenades", "medkit", "map-editor"],
       "display-name": "Loot randomly spawns around the map",
       "blurb": "Configure probability of loot to spawn. Place loot spawn locations across map. Loot respawns within a certain interval of time after being picked up -- but it might be different."
+    },
+    "security-npc": {
+      "dependencies": ["loot-drops", "alien-swarm"],
+      "display-name": "Security NPCs protect player agents",
+      "blurb": "Security agents loot for weapons and ammo, then follow players to protect them from aliens (shooting any nearby aliens)."
     },
     "gun-textures": {
       "dependencies": ["guns"],
@@ -128,7 +138,7 @@
       "dependencies": ["character-textures"]
     },
     "shooting-milestone": {
-      "dependencies": ["loot-drops"],
+      "dependencies": ["security-npc"],
       "display-name": "Milestone #1 - Shoot Bad Guys",
       "blurb": "Players can play a game where they shoot each other and evil agents"
     },
