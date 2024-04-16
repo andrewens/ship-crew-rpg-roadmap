@@ -54,16 +54,6 @@
         "Figma map design": "https://www.figma.com/file/Oh71K1OBc5fDIZ0gkzCIRa/Ship-Crew-RPG----Milestone-%231?type=whiteboard&node-id=0%3A1&t=rPD6meSOtzAWQXVf-1"
       }
     },
-    "cave-map-textures": {
-      "dependencies": ["shooting-level"],
-      "display-name": "Create textures for map",
-      "blurb": "See map layout node above."
-    },
-    "regions-editor": {
-      "dependencies": ["map-editor", "character-controls"],
-      "display-name": "Configure map regions at Runtime",
-      "blurb": "Admins can view map spatial partitioning tree regions, which are rectangles snapped to the tilemap grid; admins can drag the corners of regions, create new regions, and delete regions."
-    },
     "character-controls": {
       "dependencies": ["hello-world-milestone"],
       "display-name": "Players can control agents",
@@ -79,35 +69,10 @@
       "display-name": "Agents can pick up and drop items",
       "blurb": "Agents can pick up items by walking over dropped items, unless all ten item slots in their hotbar are full. All items stack infinitely. Agents can equip one item at a time (or unequip items), which they can then drop. Players controlling an agent see its inventory and can drop and unequip/equip items."
     },
-    "shadows": {
-      "dependencies": ["regions-editor"],
-      "display-name": "Cave shadows",
-      "blurb": "Fog of war. Map regions not within character's line of sight, with no teammate inside, are dark. Players and their teammates automatically have a light source on them."
-    },
     "guns": {
       "dependencies": ["basic-inventory"],
       "display-name": "Agents can shoot weapons",
       "blurb": "Agents can pick up gun items, which they can shoot. If an agent is shot, they take damage and eventually die, and are removed. Agents flash red when they take damage."
-    },
-    "grenades": {
-      "dependencies": ["basic-inventory"],
-      "display-name": "Agents can throw explosive grenades",
-      "blurb": "boom"
-    },
-    "medkit": {
-      "dependencies": ["basic-inventory"],
-      "display-name": "Agents can heal themselves or others with medkits",
-      "blurb": "health"
-    },
-    "knife": {
-      "dependencies": ["basic-inventory"],
-      "display-name": "Agents can melee with a knife",
-      "blurb": "slash"
-    },
-    "character-textures": {
-      "dependencies": ["basic-inventory"],
-      "display-name": "Character sprites",
-      "blurb": "Two character spritesheets -- alien swarm and human. Includes walk cycles for character while they're holding an item, and while they're empty handed. Characters look sci fi."
     },
     "respawn": {
       "dependencies": ["character-controls"],
@@ -115,7 +80,7 @@
       "blurb": "Agents respawn when they die at their team spawn location. Agents have a temporary forcefield when they respawn."
     },
     "loot-drops": {
-      "dependencies": ["guns", "grenades", "medkit", "map-editor"],
+      "dependencies": ["guns", "map-editor"],
       "display-name": "Loot randomly spawns around the map",
       "blurb": "Configure probability of loot to spawn. Place loot spawn locations across map. Loot respawns within a certain interval of time after being picked up -- but it might be different."
     },
@@ -123,19 +88,6 @@
       "dependencies": ["loot-drops", "alien-swarm"],
       "display-name": "Security NPCs protect player agents",
       "blurb": "Security agents loot for weapons and ammo, then follow players to protect them from aliens (shooting any nearby aliens)."
-    },
-    "gun-textures": {
-      "dependencies": ["guns"],
-      "display-name": "Create textures for guns and ammo",
-      "blurb": "Pistol, assault rifle, and machine gun. Pistol/AR use same ammo, machine gun uses special ammo. Sci-fi appearances!!!"
-    },
-    "item-textures": {
-      "dependencies": ["grenades", "medkit", "knife"],
-      "display-name": "Grenade/medkit/knife textures",
-      "blurb": "Sci fi appearance"
-    },
-    "filler": {
-      "dependencies": ["character-textures"]
     },
     "shooting-milestone": {
       "dependencies": ["security-npc"],
