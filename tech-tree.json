@@ -44,7 +44,17 @@
     "map-editor": {
       "dependencies": ["hello-world-milestone"],
       "display-name": "Map editing at Runtime",
-      "blurb": "Admins can edit the map at runtime: 1) Paint blocks on a plane a different enum (even if they're air); 2) Place, move, delete, anchor/unanchor props; 3) dump map json to a textbox, copy paste it, and save it in the game files"
+      "blurb": "Admins can edit the map at runtime: 1) Paint blocks on a plane a different enum (even if they're air); 2) dump map json to a textbox, copy paste it, and save it in the game files"
+    },
+    "prop-editor": {
+      "dependencies": ["map-editor"],
+      "display-name": "Prop editing at Runtime",
+      "blurb": "Admins can place, move, delete, and anchor/unanchor props in the map -- unconstrained to the tilemap grid. Props can be saved to map files and loaded"
+    },
+    "map-file-database": {
+      "dependencies": ["map-editor"],
+      "display-name": "Live map file database",
+      "blurb": "Store map files in roblox datastores; use admin console to load maps from database and browse database; set default map file for all future servers"
     },
     "shooting-level": {
       "dependencies": ["map-editor"],
@@ -80,12 +90,12 @@
       "blurb": "Agents respawn when they die at their team spawn location. Agents have a temporary forcefield when they respawn."
     },
     "loot-drops": {
-      "dependencies": ["guns", "map-editor"],
+      "dependencies": ["guns", "shooting-level"],
       "display-name": "Loot randomly spawns around the map",
       "blurb": "Configure probability of loot to spawn. Place loot spawn locations across map. Loot respawns within a certain interval of time after being picked up -- but it might be different."
     },
     "security-npc": {
-      "dependencies": ["loot-drops", "alien-swarm"],
+      "dependencies": ["loot-drops", "alien-swarm", "respawn"],
       "display-name": "Security NPCs protect player agents",
       "blurb": "Security agents loot for weapons and ammo, then follow players to protect them from aliens (shooting any nearby aliens)."
     },
