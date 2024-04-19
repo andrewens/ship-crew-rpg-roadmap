@@ -44,7 +44,9 @@
     "map-editor": {
       "dependencies": ["hello-world-milestone"],
       "display-name": "Map editing at Runtime",
-      "blurb": "Admins can edit the map at runtime: 1) Paint blocks on a plane a different enum (even if they're air); 2) dump map json to a textbox, copy paste it, and save it in the game files"
+      "blurb": "Admins can edit the map at runtime: 1) Paint blocks on a plane a different enum (even if they're air); 2) dump map json to a textbox, copy paste it, and save it in the game files",
+      "completed": "4-19-24",
+      "icon": "assets/grass-block.webp"
     },
     "prop-editor": {
       "dependencies": ["map-editor"],
