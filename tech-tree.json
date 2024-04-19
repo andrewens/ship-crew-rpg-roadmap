@@ -67,7 +67,9 @@
     "character-controls": {
       "dependencies": ["hello-world-milestone"],
       "display-name": "Players can control agents",
-      "blurb": "Players can control an agent using WASD. Their camera tracks the agent they're controlling automatically. Players can only control one agent at a time. Controlled agents can't be prompted via LLM in any capacity."
+      "blurb": "Players can control an agent using WASD. Their camera tracks the agent they're controlling automatically. Players can only control one agent at a time. Controlled agents can't be prompted via LLM in any capacity.",
+      "completed": "4-18-24",
+      "icon": "assets/xbox-controller.png"
     },
     "alien-swarm": {
       "dependencies": ["character-controls"],
