@@ -150,12 +150,12 @@
       "blurb": "A bunch of planets orbit a star. Moons orbit planets. Orbits are defined as elliptical paths, which can be edited with the map editor mode."
     },
     "ship-gravity": {
-      "dependencies": ["solar-system"],
+      "dependencies": ["planets"],
       "display-name": "Ships feel gravity",
       "blurb": "Ships fall toward gravitational objects like planets and stars. Ships can be controlled relative to their orbital trajectory -- up/down = changing orbital height, left/right = adjusting speed at that orbit. Players can see the projected path of their ship as well as necessary orbital information."
     },
     "ship-auto-pilot": {
-      "dependencies": ["ship-gravity"],
+      "dependencies": ["ship-gravity", "solar-system"],
       "display-name": "Ship auto pilot",
       "blurb": "Ship can automatically fly to a given destination planet or hold an arbitrarily specified orbit."
     },
