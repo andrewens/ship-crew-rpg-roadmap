@@ -149,15 +149,35 @@
       "display-name": "Solar System Orbits",
       "blurb": "A bunch of planets orbit a star. Moons orbit planets. Orbits are defined as elliptical paths, which can be edited with the map editor mode."
     },
-
-    "ship-milestone": {
+    "ship-gravity": {
       "dependencies": ["solar-system"],
-      "display-name": "Milestone #2 - Protect and Repair Your Ship",
-      "blurb": "Players can board ships which automatically travel the solar system, and are in need of constant repair and defense."
+      "display-name": "Ships feel gravity",
+      "blurb": "Ships fall toward gravitational objects like planets and stars. Ships can be controlled relative to their orbital trajectory -- up/down = changing orbital height, left/right = adjusting speed at that orbit. Players can see the projected path of their ship as well as necessary orbital information."
     },
+    "ship-auto-pilot": {
+      "dependencies": ["ship-gravity"],
+      "display-name": "Ship auto pilot",
+      "blurb": "Ship can automatically fly to a given destination planet or hold an arbitrarily specified orbit."
+    },
+    "ship-navigation-milestone": {
+      "dependencies": ["ship-auto-pilot"],
+      "display-name": "Milestone #2 - Ships can navigate the solar system",
+      "blurb": "Players can board ships which automatically travel the solar system"
+    },
+    "ship-repair-milestone": {
+      "dependencies": ["ship-navigation-milestone"],
+      "display-name": "Milestone #3 - Ships can be damaged, repaired, destroyed, and spawned.",
+      "blurb": "Players/agents must gather items to repair the core ship systems: power, thrust, computer, life support, weapons, gravity. Ships can crash onto planets and be damaged beyond repair."
+    },
+    "ship-weapons-milestone": {
+      "dependencies": ["ship-repair-milestone"],
+      "display-name": "Milestone #4 - Ships have laser weapons for attack and mining",
+      "blurb": "Agents can use on-board ship weapons to fight enemies. Enemies can board the player's ship for more personal combat. Ship weapons can destroy space rocks for mining purposes. (?)"
+    },
+
     "mining-milestone": {
-      "dependencies": ["ship-milestone"],
-      "display-name": "Milestone #3 - Collect Resources for your Ship & Missions",
+      "dependencies": ["ship-weapons-milestone"],
+      "display-name": "Milestone #5 - Collect Resources for your Ship & Missions",
       "blurb": "Players can explore many different planets to forage and mine for items needed for quests and repairing/upgrading their ship."
     },
     "fun-landmark": {
