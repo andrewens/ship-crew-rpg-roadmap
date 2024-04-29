@@ -92,7 +92,9 @@
       "dependencies": ["basic-inventory"],
       "display-name": "Agents can shoot weapons",
       "blurb": "Agents can pick up gun items, which they can shoot. If an agent is shot, they take damage and eventually die, and are removed. Agents flash red when they take damage.",
-      "started": "4-26-24"
+      "started": "4-26-24",
+      "completed": "4-29-24",
+      "icon": "assets/check-mark-shield.png"
     },
     "respawn": {
       "dependencies": ["character-controls"],
