@@ -52,7 +52,8 @@
     "prop-editor": {
       "dependencies": ["map-editor"],
       "display-name": "Prop editing at Runtime",
-      "blurb": "Admins can place, move, delete, and anchor/unanchor props in the map -- unconstrained to the tilemap grid. Props can be saved to map files and loaded"
+      "blurb": "Admins can place, move, delete, and anchor/unanchor props in the map -- unconstrained to the tilemap grid. Props can be saved to map files and loaded",
+      "started": "4-30-24"
     },
     "map-file-database": {
       "dependencies": ["map-editor"],
@@ -117,7 +118,8 @@
     "shooting-milestone": {
       "dependencies": ["security-npc"],
       "display-name": "Milestone #1 - Shoot Bad Guys",
-      "blurb": "Players can play a game where they shoot each other and evil agents"
+      "blurb": "Players can play a game where they shoot each other and evil agents",
+      "started": "4-29-24"
     },
 
     "spaceship-shells": {
