@@ -53,7 +53,8 @@
       "dependencies": ["map-editor"],
       "display-name": "Prop editing at Runtime",
       "blurb": "Admins can place, move, delete, and anchor/unanchor props in the map -- unconstrained to the tilemap grid. Props can be saved to map files and loaded",
-      "started": "4-30-24"
+      "started": "4-30-24",
+      "completed": "5-6-24"
     },
     "map-file-database": {
       "dependencies": ["map-editor"],
@@ -67,7 +68,8 @@
       "links": {
         "Figma map design": "https://www.figma.com/file/Oh71K1OBc5fDIZ0gkzCIRa/Ship-Crew-RPG----Milestone-%231?type=whiteboard&node-id=0%3A1&t=rPD6meSOtzAWQXVf-1"
       },
-      "started": "4-24-24"
+      "started": "4-24-24",
+      "completed": "5-6-24"
     },
     "character-controls": {
       "dependencies": ["hello-world-milestone"],
@@ -80,7 +82,8 @@
       "dependencies": ["character-controls"],
       "display-name": "Alien Swarm",
       "blurb": "Hostile NPC, kind of like zombies. Follow nearby agents, deal damage on touch",
-      "started": "4-26-24"
+      "started": "4-26-24",
+      "completed": "5-6-24"
     },
     "basic-inventory": {
       "dependencies": ["character-controls"],
@@ -101,7 +104,8 @@
       "dependencies": ["character-controls"],
       "display-name": "Agents can respawn",
       "blurb": "Agents respawn when they die at their team spawn location. Agents have a temporary forcefield when they respawn.",
-      "started": "4-26-24"
+      "started": "4-26-24",
+      "completed": "5-6-24"
     },
     "loot-drops": {
       "dependencies": ["guns", "shooting-level"],
@@ -119,7 +123,8 @@
       "dependencies": ["security-npc"],
       "display-name": "Milestone #1 - Shoot Bad Guys",
       "blurb": "Players can play a game where they shoot each other and evil agents",
-      "started": "4-29-24"
+      "started": "4-29-24",
+      "completed": "5-6-24"
     },
 
     "spaceship-shells": {
@@ -130,7 +135,8 @@
     "environments": {
       "dependencies": ["shooting-milestone"],
       "display-name": "Separate sandbox environments",
-      "blurb": "Agents can teleport between different tilemap 'sandboxes' via command line or doors. Client only renders one sandbox at a time."
+      "blurb": "Agents can teleport between different tilemap 'sandboxes' via command line or doors. Client only renders one sandbox at a time.",
+      "completed": "5-6-24"
     },
 
     "spaceship-environment": {
